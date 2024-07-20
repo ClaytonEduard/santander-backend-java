@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+
     private final UserRepository userRepository;
 
     public UserServiceImpl(UserRepository userRepository){
@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User create(User userToCreate) {
-        if(userRepository.existsByAccountNumber(userToCreate.getAccount().getNummber())){
+        if(userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())){
             throw new IllegalArgumentException("This Account number already exists.");
         }
         return userRepository.save(userToCreate);

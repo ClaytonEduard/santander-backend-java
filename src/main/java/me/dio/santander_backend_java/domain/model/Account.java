@@ -25,7 +25,7 @@ public class Account {
     private Long id;
 
     @Column(unique = true)/* numero da coluna unico */
-    private String nummber;
+    private String number;
 
     private String agency;
 
