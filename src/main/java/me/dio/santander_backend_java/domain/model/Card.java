@@ -24,8 +24,8 @@ public class Card {
 
     @Column(unique = true)
     private String number;
-
-    @Column(name ="available_limit",precision = 2, scale = 13) // 11 inteiros antes da virgula, com precisao de 2
+    // 99.999.999.999,99
+    @Column(name ="available_limit",precision = 13, scale = 2) // 11 inteiros antes da virgula, com precisao de 2
     private BigDecimal limit;
 
 }
