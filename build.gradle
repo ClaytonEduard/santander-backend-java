@@ -29,6 +29,13 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok:1.18.34'
 }
 
+// para o server web saber qual a classe main
+tasks.jar{
+	manifest{
+		attributes["Main-Class"] = "me.dio.santander_backend_java.SantanderBackendJavaApplication"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
